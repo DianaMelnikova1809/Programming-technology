@@ -1,0 +1,5 @@
+﻿  menu.cpp
+D:\3 kurs\Технология программирования\lab1\src\menu.cpp(77,8): warning C4101: del_id: неиспользованная локальная переменная
+D:\3 kurs\Технология программирования\lab1\src\menu.cpp(871,7): warning C4101: year_of_death: неиспользованная локальная переменная
+D:\3 kurs\Технология программирования\lab1\src\menu.cpp(870,7): warning C4101: year_of_birth: неиспользованная локальная переменная
+  lab1.vcxproj -> D:\3 kurs\Технология программирования\lab1\x64\Debug\lab1.exe
