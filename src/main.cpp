@@ -1,9 +1,8 @@
 ﻿#include "menu.h"
-//menu
 using namespace Menu;
 int main()
 {
-    setlocale(LC_ALL, "rus"); // корректное отображение Кириллицы
+    setlocale(LC_ALL, "rus");
     menu();
     return 0;
 }

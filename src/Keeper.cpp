@@ -31,7 +31,6 @@ keeper::keeper(const keeper& ref_k)
 	this->p = ref_k.p;
 	this->n = ref_k.n;
 	this->f = ref_k.f;
-	//TODO: сделать присваивание и для других классов
 }
 
 keeper::~keeper()
@@ -138,19 +137,19 @@ void keeper::delete_fantast(int id)
 
 Poet keeper::get_poet(int id)
 {
-	if (id >= size_p) { cout << "замени на эксепшен!" << endl; return p[0]; }//TODO: замени на эксепшен! 
+	if (id >= size_p) { cout << "замени на эксепшен!" << endl; return p[0]; }
 	return p[id];
 }
 
 Novelist keeper::get_novelist(int id)
 {
-	if (id >= size_n) { cout << "замени на эксепшен!" << endl; return n[0]; }//TODO: замени на эксепшен! 
+	if (id >= size_n) { cout << "замени на эксепшен!" << endl; return n[0]; }
 	return n[id];
 }
 
 Fantast keeper::get_fantast(int id)
 {
-	if (id >= size_f) { cout << "замени на эксепшен!" << endl; return f[0]; }//TODO: замени на эксепшен! 
+	if (id >= size_f) { cout << "замени на эксепшен!" << endl; return f[0]; }
 	return f[id];
 }
 
@@ -221,35 +220,25 @@ void keeper::Read()
 	ifstream in("data.txt");
 	if (in.is_open())
 	{
-		//обновляем keeper.h
-		
-		/*
-		1 строка - получаем символ: 'p' - поэт
-		2 строка - получаем ФИО
-		3 строка - получаем несколько основных произведений
-		4-5 строки - получаем годы жизни
-		и прочее...
-		*/
 		while (!in.eof()) {
 			string c;
 			getline(in, c);
-			if (c == "Poet") {/*TODO: Вынести в отедельную функцию*/
+			if (c == "Poet") {
 				getline(in, fn);
 				in >> yob;
 				in >> yod;
-				getline(in, new_name_of_book);//TODO: сделать красиво - сейчас применяется для переноса на другую строку
+				getline(in, new_name_of_book);
 				getline(in, new_name_of_book);
 				string* new_books = split(new_name_of_book, ';');
 				int size_books = stoi(new_books[0]);
 				//присваиваем новые значения
-				//Poet new_p();//исправить последний параметр
 				add_poet(fn, yob, yod, new_books, size_books);
 			}
 			else if (c == "Novelist") {
 				getline(in, fn);
 				in >> yob;
 				in >> yod;
-				getline(in, new_name_of_book);//TODO: сделать красиво - сейчас применяется для переноса на другую строку
+				getline(in, new_name_of_book);
 				getline(in, new_name_of_book);
 				string* new_books = split(new_name_of_book, ';');
 				int size_books = stoi(new_books[0]);
@@ -262,7 +251,7 @@ void keeper::Read()
 				getline(in, new_name_of_book);
 				string* new_books = split(new_name_of_book, ';');
 				int size_books = stoi(new_books[0]);
-				bool isFilmed; in >> isFilmed; // \n - проверить на перенос строки
+				bool isFilmed; in >> isFilmed; 
 
 				//присваиваем новые значения
 				add_fantast(fn, new_books, size_books, isFilmed);
@@ -285,7 +274,7 @@ void keeper::print_poet(int id)
 	if (id >= size_p) { return; }
 	cout << "ФИО: " << p[id].get_fullname() << endl;
 	cout << "Годы жизни: " << p[id].get_years_of_birth() << " - " << p[id].get_years_of_death() << endl;
-	if (p[id].get_number_of_books() == 0) { cout << "Нету книг" << endl; }
+	if (p[id].get_number_of_books() == 0) { cout << "Нет книг" << endl; }
 	else if (!have_word(p[0].get_name_books()[0])) {
 		for (int i = 1; i <= p[id].get_number_of_books(); i++) {
 			cout << "Книга " << i << ": ";
@@ -314,7 +303,7 @@ void keeper::print_novelist(int id)
 	if (id >= size_n) { return; }
 	cout << "ФИО: " << n[id].get_fullname() << endl;
 	cout << "Годы жизни: " << n[id].get_years_of_birth() << " - " << n[id].get_years_of_death() << endl;
-	if (n[id].get_number_of_books() == 0) { cout << "Нету книг" << endl; }
+	if (n[id].get_number_of_books() == 0) { cout << "Нет книг" << endl; }
 	else if (!have_word(n[0].get_name_books()[0])) {
 		for (int i = 1; i <= n[id].get_number_of_books(); i++) {
 			cout << "Книга " << i << ": ";
@@ -342,7 +331,7 @@ void keeper::print_fantast(int id)
 {
 	if (id >= size_f) { return; }
 	cout << "ФИО: " << f[id].get_fullname() << endl;
-	if (f[id].get_number_of_books() == 0) { cout << "Нету книг" << endl; }
+	if (f[id].get_number_of_books() == 0) { cout << "Нет книг" << endl; }
 	else if (!have_word(p[0].get_name_books()[0])) {
 		for (int i = 1; i <= f[id].get_number_of_books(); i++) {
 			cout << "Книга " << i << ": ";

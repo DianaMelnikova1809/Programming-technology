@@ -21,7 +21,7 @@ namespace Menu {
 		if (menu == 2)
 			set_color(RED);
 		else set_color(WHITE);
-		cout << "добавить книгу в список произведений или удалить её\n";
+		cout << "Добавить книгу в список произведений или удалить её\n";
 		if (menu == 3)
 			set_color(RED);
 		else set_color(WHITE);
@@ -29,19 +29,19 @@ namespace Menu {
 		if (menu == 4)
 			set_color(RED);
 		else set_color(WHITE);
-		cout << "изменить данные\n";
+		cout << "Изменить данные\n";
 		if (menu == 5)
 			set_color(RED);
 		else set_color(WHITE);
-		cout << "сохранить данные\n";
+		cout << "Сохранить данные\n";
 		if (menu == 6)
 			set_color(RED);
 		else set_color(WHITE);
-		cout << "прочитать данные\n";
+		cout << "Прочитать данные\n";
 		if (menu == 7)
 			set_color(RED);
 		else set_color(WHITE);
-		cout << "Exit\n" << endl;
+		cout << "Выйти\n" << endl;
 	}
 
 	void menu() {
@@ -142,7 +142,6 @@ namespace Menu {
 				break;
 			}
 
-			//TODO: потестить
 			if (ENTER_) { //запуск функций
 				switch (func) {
 				case 1: //Добавить поэта
@@ -484,7 +483,6 @@ namespace Menu {
 				ENTER_ = true;
 				break;
 			}
-			//TODO: потестить
 			if (ENTER_) { //запуск функций
 				switch (func) {
 				case 1: //Вывести поэта по id
@@ -605,7 +603,6 @@ namespace Menu {
 				ENTER_ = true;
 				break;
 			}
-			//TODO: потестить
 			if (ENTER_) { //запуск функций
 				switch (func) {
 				case 1: //Изменить данные поэта по id
@@ -687,7 +684,6 @@ namespace Menu {
 				ENTER_ = true;
 				break;
 			}
-			//TODO: потестить
 			if (ENTER_) { //запуск функций
 				switch (func) {
 				case 1: //Изменить данные поэта по id
@@ -791,7 +787,6 @@ namespace Menu {
 				ENTER_ = true;
 				break;
 			}
-			//TODO: потестить
 			if (ENTER_) { //запуск функций
 				switch (func) {
 				case 1: //Изменить данные поэта по id
@@ -894,7 +889,6 @@ namespace Menu {
 				ENTER_ = true;
 				break;
 			}
-			//TODO: потестить
 			if (ENTER_) { //запуск функций
 				switch (func) {
 				case 1: 
