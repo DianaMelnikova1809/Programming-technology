@@ -30,7 +30,6 @@ public:
 
 	void set_biography(string biography);
 
-	//изменение данных
 	void add_book(string)override;
 	void delete_book()override;
 };

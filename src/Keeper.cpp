@@ -88,6 +88,7 @@ void keeper::add_novelist(string fullname, int year_of_birth, int year_of_death,
 	new_novelists[size_p - 1].set_years_of_death(year_of_death);
 	new_novelists[size_p - 1].set_name_books(books);
 	new_novelists[size_p - 1].set_number_of_books(size_b);
+	new_novelists[size_p - 1].set_biography(biography);
 	n = new_novelists;
 }
 
@@ -137,19 +138,19 @@ void keeper::delete_fantast(int id)
 
 Poet keeper::get_poet(int id)
 {
-	if (id >= size_p) { cout << "замени на эксепшен!" << endl; return p[0]; }
+	if (id >= size_p) { return p[0]; }
 	return p[id];
 }
 
 Novelist keeper::get_novelist(int id)
 {
-	if (id >= size_n) { cout << "замени на эксепшен!" << endl; return n[0]; }
+	if (id >= size_n) { return n[0]; }
 	return n[id];
 }
 
 Fantast keeper::get_fantast(int id)
 {
-	if (id >= size_f) { cout << "замени на эксепшен!" << endl; return f[0]; }
+	if (id >= size_f) { return f[0]; }
 	return f[id];
 }
 
@@ -293,7 +294,7 @@ void keeper::print_poet(int id)
 void keeper::print_novelist()
 {
 	for (int i = 0; i < size_n; i++) {
-		cout << "\nНовелист " << i + 1 << ": " << endl;
+		cout << "\nРоманист " << i + 1 << ": " << endl;
 		print_novelist(i);
 	}
 }

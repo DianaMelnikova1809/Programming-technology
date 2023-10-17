@@ -12,8 +12,6 @@ namespace Menu {
 	void menu_output(short menu) {
 		set_color(WHITE);
 		system("cls");
-
-		cout << endl << "====================================\n\n";
 		if (menu == 1)
 			set_color(RED);
 		else set_color(WHITE);
@@ -182,8 +180,6 @@ namespace Menu {
 	{
 		set_color(WHITE);
 		system("cls");
-
-		cout << endl << "====================================\n\n";
 		if (menu == 1)
 			set_color(RED);
 		else set_color(WHITE);
@@ -334,7 +330,6 @@ namespace Menu {
 				break;
 			}
 
-			//TODO: потестить
 			if (ENTER_) { //запуск функций
 				switch (func) {
 				case 1: //Добавить книгу поэта
@@ -367,8 +362,6 @@ namespace Menu {
 	{
 		set_color(WHITE);
 		system("cls");
-
-		cout << endl << "====================================\n\n";
 		if (menu == 1)
 			set_color(RED);
 		else set_color(WHITE);
@@ -537,8 +530,6 @@ namespace Menu {
 	{
 		set_color(WHITE);
 		system("cls");
-
-		cout << endl << "====================================\n\n";
 		if (menu == 1)
 			set_color(RED);
 		else set_color(WHITE);
@@ -631,8 +622,6 @@ namespace Menu {
 	{
 		set_color(WHITE);
 		system("cls");
-
-		cout << endl << "====================================\n\n";
 		if (menu == 1)
 			set_color(RED);
 		else set_color(WHITE);
@@ -688,8 +677,9 @@ namespace Menu {
 				switch (func) {
 				case 1: //Изменить данные поэта по id
 					cout << "Введите новое ФИО" << endl;
-					getline(cin,fullname);
-					getline(cin,fullname);
+					//getline(cin,fullname);
+					//getline(cin,fullname);
+					cin >> fullname;
 					k.get_poet(id).set_fullname(fullname);
 					cout << "Данные изменены" << endl;
 					_getch();
@@ -728,8 +718,6 @@ namespace Menu {
 	{
 		set_color(WHITE);
 		system("cls");
-
-		cout << endl << "====================================\n\n";
 		if (menu == 1)
 			set_color(RED);
 		else set_color(WHITE);
@@ -827,8 +815,6 @@ namespace Menu {
 	{
 		set_color(WHITE);
 		system("cls");
-
-		cout << endl << "====================================\n\n";
 		if (menu == 1)
 			set_color(RED);
 		else set_color(WHITE);
@@ -919,8 +905,6 @@ namespace Menu {
 	{
 		set_color(WHITE);
 		system("cls");
-
-		cout << endl << "====================================\n\n";
 		if (menu == 1)
 			set_color(RED);
 		else set_color(WHITE);
