@@ -62,6 +62,18 @@ public:
 
 	void print_all();
 
+	void ch_p_fio(int id, string fullname);
+	void ch_p_yob(int id, int year_of_birth);
+	void ch_p_yod(int id, int year_of_death);
+
+	void ch_n_fio(int id, string fullname);
+	void ch_n_yob(int id, int year_of_birth);
+	void ch_n_yod(int id, int year_of_death);
+	void ch_n_bio(int id, string bio);
+
+	void ch_f_fio(int id, string fullname);
+
+
 	//добавление и удаление книг
 	void add_book_poet(string, int id);
 	void delete_book_poet(int);

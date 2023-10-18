@@ -675,26 +675,24 @@ namespace Menu {
 			}
 			if (ENTER_) { //запуск функций
 				switch (func) {
-				case 1: //Изменить данные поэта по id
+				case 1:
 					cout << "Введите новое ФИО" << endl;
-					//getline(cin,fullname);
-					//getline(cin,fullname);
 					cin >> fullname;
-					k.get_poet(id).set_fullname(fullname);
+					k.ch_p_fio(id, fullname);
 					cout << "Данные изменены" << endl;
 					_getch();
 					break;
-				case 2: //Изменить данные романиста по id
+				case 2: 
 					cout << "Введите новую дату рождения" << endl;
 					cin >> year_of_birth;
-					k.get_poet(id).set_years_of_birth(year_of_birth);
+					k.ch_p_yob(id, year_of_birth);
 					cout << "Данные изменены" << endl;
 					_getch();
 					break;
-				case 3: //Изменить данные фантаста по id
+				case 3: 
 					cout << "Введите новую дату смерти" << endl;
 					cin >> year_of_death;
-					k.get_poet(id).set_years_of_death(year_of_death);
+					k.ch_p_yod(id, year_of_death);
 					cout << "Данные изменены" << endl;
 					_getch();
 					break;
@@ -703,7 +701,6 @@ namespace Menu {
 					cin >> id;
 					cout << "Введите название нового произведения" << endl;
 					getline(cin,book);
-					k.get_poet(id).set_book(book, id);
 					cout << "Данные изменены" << endl;
 					_getch();
 					return;
@@ -763,13 +760,13 @@ namespace Menu {
 			switch (key) {
 			case 80: //вниз
 				func++;
-				if (func > 5)
+				if (func > 6)
 					func = 1;
 				break;
 			case 72: //вверх
 				func--;
 				if (func < 1)
-					func = 5;
+					func = 6;
 				break;
 			case 13: //enter
 				ENTER_ = true;
@@ -777,32 +774,35 @@ namespace Menu {
 			}
 			if (ENTER_) { //запуск функций
 				switch (func) {
-				case 1: //Изменить данные поэта по id
+				case 1: 
 					cout << "Введите новое ФИО" << endl;
 					getline(cin, fullname);
-					k.get_novelist(id).set_fullname(fullname);
+					k.ch_n_fio(id, fullname);
+					cout << "Данные изменены" << endl;
 					break;
-				case 2: //Изменить данные романиста по id
+				case 2: 
 					cout << "Введите новую дату рождения" << endl;
 					cin >> year_of_birth;
-					k.get_novelist(id).set_years_of_birth(year_of_birth);
+					k.ch_n_yob(id, year_of_birth);
+					cout << "Данные изменены" << endl;
 					break;
-				case 3: //Изменить данные фантаста по id
+				case 3: 
 					cout << "Введите новую дату смерти" << endl;
 					cin >> year_of_death;
-					k.get_novelist(id).set_years_of_death(year_of_death);
+					k.ch_n_yod(id, year_of_death);
+					cout << "Данные изменены" << endl;
 					break;
 				case 4:
 					cout << "Введите id книги, которую хотите изменить" << endl;
 					cin >> id_book;
 					cout << "Введите название нового произведения" << endl;
 					getline(cin,book);
-					k.get_novelist(id).set_book(book, id_book);
 					break;
 				case 5:
 					cout << "Введите новую биографию для романиста" << endl;
 					getline(cin, bio);
-					k.get_novelist(id).set_biography(bio);
+					k.ch_n_bio(id, bio);
+					cout << "Данные изменены" << endl;
 					break;
 				case 6:
 					return;
@@ -880,19 +880,18 @@ namespace Menu {
 				case 1: 
 					cout << "Введите новое ФИО" << endl;
 					getline(cin, fullname);
-					k.get_fantast(id).set_fullname(fullname);
+					k.ch_f_fio(id, fullname);
+					cout << "Данные изменены" << endl;
 					break;
 				case 2: 
 					cout << "Введите id книги, которую хотите изменить" << endl;
 					cin >> id_book;
 					cout << "Введите название нового произведения" << endl;
 					getline(cin,book);
-					k.get_fantast(id).set_book(book, id_book);
 					break;
 				case 3: 
 					cout << "Введите 1 если фильм снят, если не снят - введите 0";
 					cin >> isFilmed;
-					k.get_fantast(id).set_isFilmed(isFilmed);
 					break;
 				case 4:
 					return;

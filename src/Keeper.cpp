@@ -290,6 +290,47 @@ void keeper::print_poet(int id)
 	}
 }
 
+void keeper::ch_p_fio(int id, string fullname)
+{
+	p[id].set_fullname(fullname);
+}
+
+void keeper::ch_n_fio(int id, string fullname)
+{
+	n[id].set_fullname(fullname);
+}
+
+void keeper::ch_f_fio(int id, string fullname)
+{
+	f[id].set_fullname(fullname);
+}
+
+void keeper::ch_p_yob(int id, int year_of_birth)
+{
+	p[id].set_years_of_birth(year_of_birth);
+}
+
+void keeper::ch_n_yob(int id, int year_of_birth)
+{
+	n[id].set_years_of_birth(year_of_birth);
+}
+
+void keeper::ch_p_yod(int id, int year_of_death)
+{
+	p[id].set_years_of_death(year_of_death);
+}
+
+void keeper::ch_n_yod(int id, int year_of_death)
+{
+	n[id].set_years_of_death(year_of_death);
+}
+
+void keeper::ch_n_bio(int id, string bio)
+{
+	n[id].set_biography(bio);
+}
+
+
 
 void keeper::print_novelist()
 {
